@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{153211FE-B810-46BB-A293-649F54ED1720}</ProjectGuid>
+    <ProjectGuid>{86885B3B-9A40-482F-9264-5330B43CA763}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAO_QuanLy</RootNamespace>
@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
-      <Project>{aa492c82-5880-48b9-940a-ef161b623f26}</Project>
+      <Project>{8dd25514-cf10-4d12-b2ed-0da4a394ca75}</Project>
       <Name>DTO_QuanLy</Name>
     </ProjectReference>
   </ItemGroup>

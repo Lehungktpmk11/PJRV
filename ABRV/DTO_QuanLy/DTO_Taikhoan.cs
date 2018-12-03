@@ -8,53 +8,52 @@ namespace DTO_QuanLy
 {
     public class DTO_Taikhoan
     {
+        private string iD;
         private string user;
         private string pass;
-        private string iD;
-        private bool quyen;
+        private Boolean quyen;
 
-        public bool Quyen
+        public Boolean Quyen
         {
             get { return quyen; }
             set { quyen = value; }
         }
 
-        public string Id
-        {
-            get { return iD; }
-            set { iD = value; }
-        }
-
-        public string Pass
+        public string MK
         {
             get { return pass; }
             set { pass = value; }
         }
 
-        public string User
+        public string TK
         {
             get { return user; }
             set { user = value; }
         }
 
+        public string ID
+        {
+            get { return iD; }
+            set { iD = value; }
+        }
+
+
         public DTO_Taikhoan()
         {
 
         }
-        public DTO_Taikhoan(string tk,string mk)
+        public DTO_Taikhoan(string tk, string mk)  
         {
-            
-            this.User = tk;
-            this.Pass = mk;
-            
+            this.TK = tk;
+            this.MK = mk;
         }
-        public DTO_Taikhoan(string i, string tk, string mk,bool q)
+        public DTO_Taikhoan(string id, string tk, string mk, Boolean qq)
         {
-            this.Id = i;
-            this.User = tk;
-            this.Pass = mk;
-            this.Quyen = q;
-        }
+            this.iD = id;
+            this.TK = tk;
+            this.MK = mk;
+            this.Quyen = qq;
 
+        }
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B3EC9411-41C8-4D3A-BE57-DBED792C6F93}</ProjectGuid>
+    <ProjectGuid>{85B7D43F-A478-4A40-986C-5F0D26867C87}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ABRV</RootNamespace>
     <AssemblyName>ABRV</AssemblyName>
@@ -46,34 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fabrv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fabrv.Designer.cs">
+      <DependentUpon>Fabrv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fadmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fadmin.Designer.cs">
       <DependentUpon>Fadmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fdangnhap.cs">
+    <Compile Include="Fdangky.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fdangnhap.Designer.cs">
-      <DependentUpon>Fdangnhap.cs</DependentUpon>
+    <Compile Include="Fdangky.Designer.cs">
+      <DependentUpon>Fdangky.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FDangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FDangnhap.Designer.cs">
+      <DependentUpon>FDangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fqldangky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fqldangky.Designer.cs">
+      <DependentUpon>Fqldangky.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Fabrv.resx">
+      <DependentUpon>Fabrv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fadmin.resx">
       <DependentUpon>Fadmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fdangnhap.resx">
-      <DependentUpon>Fdangnhap.cs</DependentUpon>
+    <EmbeddedResource Include="Fdangky.resx">
+      <DependentUpon>Fdangky.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FDangnhap.resx">
+      <DependentUpon>FDangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fqldangky.resx">
+      <DependentUpon>Fqldangky.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,11 +118,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS_QuanLy\BUS_QuanLy.csproj">
-      <Project>{d3d014fb-b396-4019-8fc2-c77957f89886}</Project>
+      <Project>{c7d8f009-48b3-42a0-9023-9e6af159d90b}</Project>
       <Name>BUS_QuanLy</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
-      <Project>{aa492c82-5880-48b9-940a-ef161b623f26}</Project>
+      <Project>{8dd25514-cf10-4d12-b2ed-0da4a394ca75}</Project>
       <Name>DTO_QuanLy</Name>
     </ProjectReference>
   </ItemGroup>

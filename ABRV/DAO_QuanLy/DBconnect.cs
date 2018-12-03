@@ -9,5 +9,6 @@ namespace DAO_QuanLy
     public class DBconnect
     {
         public string connec = @"Data Source=.\SQLEXPRESS;Initial Catalog=DBQLRV;Integrated Security=True";
+
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D3D014FB-B396-4019-8FC2-C77957F89886}</ProjectGuid>
+    <ProjectGuid>{C7D8F009-48B3-42A0-9023-9E6AF159D90B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BUS_QuanLy</RootNamespace>
@@ -41,16 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS_Dangnhap.cs" />
+    <Compile Include="BUS_QLDK.cs" />
+    <Compile Include="BUS_Taikhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO_QuanLy\DAO_QuanLy.csproj">
-      <Project>{153211fe-b810-46bb-a293-649f54ed1720}</Project>
+      <Project>{86885b3b-9a40-482f-9264-5330b43ca763}</Project>
       <Name>DAO_QuanLy</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
-      <Project>{aa492c82-5880-48b9-940a-ef161b623f26}</Project>
+      <Project>{8dd25514-cf10-4d12-b2ed-0da4a394ca75}</Project>
       <Name>DTO_QuanLy</Name>
     </ProjectReference>
   </ItemGroup>

@@ -7,61 +7,66 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BUS_QuanLy;
 using DTO_QuanLy;
+using BUS_QuanLy;
+
 namespace ABRV
 {
-    public partial class Fdangnhap : Form
+    public partial class FDangnhap : Form
     {
-        public Fdangnhap()
+        public FDangnhap()
         {
             InitializeComponent();
         }
-        BUS_Dangnhap busDN = new BUS_Dangnhap();
-        private void btnthoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Fdangnhap_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        BUS_Taikhoan dn = new BUS_Taikhoan();
+        public static string matk;
         private void btndangnhap_Click(object sender, EventArgs e)
         {
-            if(txtmk.Text!=""&&txttk.Text!="")
+            if(txttk.Text!=""&&txtmk.Text!="")
             {
-                DataTable dt = new DataTable();
                 DTO_Taikhoan tk = new DTO_Taikhoan(txttk.Text, txtmk.Text);
-                dt = busDN.GetTk(tk);
-                if (dt.Rows.Count>0)
+                DataTable dt = new DataTable();
+                dt = dn.GetTk(tk);
+                if(dt.Rows.Count>0)
                 {
-                    string qq = dt.Rows[0][3].ToString();
-                    if(qq=="False")
-                    {
-                        
-                    }
-                    else
+                    Boolean qq = Convert.ToBoolean(dt.Rows[0][3].ToString());
+                    if(qq)
                     {
                         Fadmin fad = new Fadmin();
                         this.Hide();
                         fad.ShowDialog();
                         this.Show();
-                    
+
+                    }
+                    else
+                    {
+                        matk = dt.Rows[0][0].ToString();
+                        Fabrv fab = new Fabrv();
+                        this.Hide();
+                        fab.ShowDialog();
+                        this.Show();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập không thành công!!!");
+                    MessageBox.Show("Sai tài khoản hoặc mật khẩu.");
                 }
+
 
 
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin!!");
+                MessageBox.Show("Hãy nhập đủ thông tin.");
             }
+        }
+
+        private void btndangky_Click(object sender, EventArgs e)
+        {
+            Fdangky fdk = new Fdangky();
+            this.Hide();
+            fdk.ShowDialog();
+            this.Show();
         }
     }
 }
