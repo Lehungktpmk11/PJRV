@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace DAO_QuanLy
 {
-    public class DAO_ThanhVien:DBconnect
+    public class DAO_ThanhVien : DBconnect
     {
         public SqlConnection Getconnec()
         {
@@ -22,11 +22,10 @@ namespace DAO_QuanLy
             DataTable dt = new DataTable();
 
             SqlConnection con = Getconnec();
-
             con.Open();
+
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
             da.Fill(dt);
-
 
             con.Close();
             return dt;
@@ -36,10 +35,10 @@ namespace DAO_QuanLy
         public bool NonQuery(string sql)
         {
 
-            SqlConnection con = new SqlConnection(connec);
+            SqlConnection con = Getconnec();
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
-            if(cmd.ExecuteNonQuery()>0)
+            if (cmd.ExecuteNonQuery() > 0)
             {
                 return true;
             }

@@ -32,10 +32,11 @@ namespace ABRV
                     Boolean qq = Convert.ToBoolean(dt.Rows[0][3].ToString());
                     if(qq)
                     {
-                        Fadmin fad = new Fadmin();
+                        Fquantrivien fqtv = new Fquantrivien();
                         this.Hide();
-                        fad.ShowDialog();
+                        fqtv.ShowDialog();
                         this.Show();
+                        matk = dt.Rows[0][0].ToString();
 
                     }
                     else
@@ -67,6 +68,7 @@ namespace ABRV
             this.Hide();
             fdk.ShowDialog();
             this.Show();
+           
         }
     }
 }

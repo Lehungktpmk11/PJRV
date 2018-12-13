@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QuanLy;
 using BUS_QuanLy;
+
 namespace ABRV
 {
     public partial class Fdangky : Form
@@ -17,38 +18,49 @@ namespace ABRV
         {
             InitializeComponent();
         }
-        BUS_QLDK qldk = new BUS_QLDK();
-        private void btnhuybo_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        BUS_QLDK busqldk = new BUS_QLDK();
+      
 
-        private void btnxacnhan_Click(object sender, EventArgs e)
+        private void btndangky_Click(object sender, EventArgs e)
         {
-            if(txttk.Text!=""&&txtmk.Text!="")
+            if(txtxnmk.Text==""||txtdktk.Text==""||txtdkmk.Text=="")
             {
-                if(rdodongy.Checked==true)
-                {
-                    DTO_Dangkytaikhoan dk = new DTO_Dangkytaikhoan(qldk.TaoMa(),txttk.Text,txtmk.Text);
-                    if(qldk.Them(dk))
-                    {
-                        MessageBox.Show("Thành công");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Chưa thành công.");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Bạn chưa đồng ý với điều khoản của AB Rao vặt.");
-                }
+                MessageBox.Show("Vui lòng nhập đủ thông tin!");
             }
             else
             {
-                MessageBox.Show("Nhập đủ thông tin.");
+              if(Kiemtra())
+                {
+                    MessageBox.Show("Xác nhận mật khẩu không trùng khớp", "Thông báo");
+                }
+                else
+                {
+                    DTO_Dangkytaikhoan dktk = new DTO_Dangkytaikhoan(busqldk.TaoMa(), txtdktk.Text, txtxnmk.Text);
+                   if(busqldk.Them(dktk))
+                    {
+                        MessageBox.Show("Đăng ký thành công. Vui lòng chờ xác nhận từ người quản trị","Thông báo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đăng ký thất bại");
+                    }
+                }
+
             }
-            
+        }
+        private bool Kiemtra()
+        {
+            if(txtdkmk.Text!=txtxnmk.Text)
+            {
+                return true;
+            }
+
+
+            return false;
+        }
+        private void btnhuybo_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

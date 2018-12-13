@@ -83,5 +83,10 @@ namespace ABRV
                 }
             }
         }
+
+        private void Fqldangky_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }

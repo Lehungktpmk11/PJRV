@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_Dangtin.cs" />
+    <Compile Include="BUS_KhachHang.cs" />
+    <Compile Include="BUS_Khoanh.cs" />
+    <Compile Include="BUS_Khuvuc.cs" />
     <Compile Include="BUS_QLDK.cs" />
     <Compile Include="BUS_Taikhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

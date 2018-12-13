@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_Dangkytaikhoan.cs" />
+    <Compile Include="DTO_Dangtin.cs" />
+    <Compile Include="DTO_KhachHang.cs" />
+    <Compile Include="DTO_Khoanh.cs" />
     <Compile Include="DTO_Taikhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -163,5 +163,14 @@ namespace ABRV
             fqldk.ShowDialog();
             this.Show();
         }
+
+        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quảnLýĐăngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
